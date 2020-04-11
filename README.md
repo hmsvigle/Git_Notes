@@ -1,5 +1,5 @@
 # Git_Notes
-1. Create local Repo / Clone Remote repo
+> Create local Repo / Clone Remote repo
 #### Create Git Local repository
 $ git init
 #### Clone remote repository to Local
