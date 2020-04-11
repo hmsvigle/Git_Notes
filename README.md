@@ -1,29 +1,33 @@
 # Git_Notes
 
-## List the git branches
+#### List the git branches
 $ git branch
 
-# create a new feature branch called 'feature-project-template'
+#### create a new feature branch called 'feature-project-template'
 $ git checkout -b feature/project-template
-# switch to the feature branch
+
+#### switch to the feature branch
 $ git checkout  <feature_branch>
 
-# stage all the files you have changed
+#### stage all the files you have changed
 $ git add .
-# check the files/directories are staged for commit.
+
+#### check the files/directories are staged for commit.
 $ git status
-# commit changes to git with an instructive message
+
+#### commit changes to git with an instructive message
 $ git commit -m 'Create project template'
-# push changes to remote branch
+
+#### push changes to remote branch
 $ git push origin feature/project-template
 
-# List all branches
- # List Local branchs :
+#### List all branches
 $ git branch -a
- # List Remote branches :
+
+#### List Remote branches :
 $ git branch -r
 
-# git view all your settings
+#### git view all your settings
 $ git config --list
 
 $ git config --global user.name "HPANIGR"
