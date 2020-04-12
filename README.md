@@ -1,5 +1,6 @@
 # Git_Notes
 
+
 > Remove Git from ubuntu machine
 ```sh
 $ sudo apt-get autoremove purge -y git
@@ -9,6 +10,31 @@ $ sudo rm -rf ~/.gitconfig
 > Check if git is still installed or not !!
 ```sh
 $ which git '# no result'
+```
+> Install git in Ubuntu machine
+```sh
+$ sudo apt-get -y update
+$ sudo apt-get install -y git
+$ git --version '# git version 2.7.4'
+```
+> configure git 
+```sh
+$ git config --list '# Lists all global configurations for git --> None for now'
+$ git config --global user.name "hmsvigle"
+$ git config --global user.email "hmsvigle@gmail.com"
+$ git config --global core.autocrlf input '# ensures consistent input behavior for all contributers'
+$ git config --global color.ui auto
+```
+> display all config of git
+```sh
+$ cat ~/.gitconfig 
+[user]
+	name = hmsvigle
+	email = hmsvigle@gmail.com
+[core]
+	autocrlf = input
+[color]
+	ui = auto
 ```
 
 > Create local Repo / Clone Remote repo
