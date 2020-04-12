@@ -1,22 +1,33 @@
 # Git_Notes
 
-> Uninstall/Remove Git from ubuntu machine
+1. [Uninstall/Remove Git from ubuntu machine]()
+2. [Install git in Ubuntu machine]()
+3. [Configure git parameters]()
+4. [Create local Repository]()
+5. [Sync remote repository]()
+6. [Make necessary code changes]()
+7. [Parallel Developement in Git]()
+8. [Pull-Fetch & Rebase-Merge]()
+9. [Merge Branch to master]()
+10. [Git Push]()
+
+### Uninstall/Remove Git from ubuntu machine
 ```sh
 $ sudo apt-get autoremove purge -y git
 $ sudo rm -rf ~/.git
 $ sudo rm -rf ~/.gitconfig
 ```
-> Check if git is still installed or not !!
+#### Check if git is still installed or not !!
 ```sh
 $ which git '# no result'
 ```
-> Install git in Ubuntu machine
+### Install git in Ubuntu machine
 ```sh
 $ sudo apt-get -y update
 $ sudo apt-get install -y git
 $ git --version '# git version 2.7.4'
 ```
-> configure git parameters
+### Configure git parameters
 ```sh
 $ git config --list '# Lists all global configurations for git --> None for now'
 $ git config --global user.name "hmsvigle"
@@ -24,7 +35,7 @@ $ git config --global user.email "hmsvigle@gmail.com"
 $ git config --global core.autocrlf input '# ensures consistent input behavior for all contributers'
 $ git config --global color.ui auto
 ```
-> display all config of git
+  #### Display all config of git
 ```sh
 $ cat ~/.gitconfig 
 [user]
@@ -35,13 +46,13 @@ $ cat ~/.gitconfig
 [color]
 	ui = auto
 ```
-### Notes !!
+> Notes !!
 ```sh
-  ---/.git/config --> Contains each specific repository related configurations
- ~/.gitconfig --> default git configurations for the user
+ $ ~/.git/config --> Contains each specific repository related configurations
+ $ ~/.gitconfig --> default git configurations for the user
 ```
 
-> Create local Repository
+### Create local Repository
 ```sh
 $ git init
 ```
@@ -75,7 +86,7 @@ $ tree .
 
 9 directories, 13 files
 ```
-> Syncing remote repository:
+### Sync remote repository
   - git should identify to which remote directory data sync (pull/push) happen.
   - add the remote repo as origin
   - pull files
@@ -88,12 +99,11 @@ $ git pull origin master
 $ ls  --> the remote repository is synced to local
   READEME.md  .git
 ```
-> Make changes:
+### Make Necessary code changes
   - git status --> Status of files added/staged/ready to commit
   - git add -A --> Stage required files 
   - git commit -m "msg" -->  commit staged files
-  - git status 
-  - git push origin
+  - git status   
 ```sh
 $ git status
 On branch master
@@ -134,7 +144,7 @@ $ git commit -m "add_word & autocomplete redis API exposure through Flask"
    create mode 100644 example1/api/requirements.txt
    create mode 100644 example1/redis/Dockerfile
 ```
-> Track all the changes made to git index
+#### Track all the changes made to git index
 ```sh
 $ git log
  commit bc56ecfebcef3b3cdde4135a4b7a287fde44bfd2
@@ -149,7 +159,8 @@ $ git log
 
     draft
 ```
-#### Note: - You cant add an empty file to git index.
+> Note: You cant add an empty file to git index.
+
 ```sh
 $ mkdir -p example2
 $ git status
@@ -177,45 +188,45 @@ $  git commit -a -m "example2 draft"
    create mode 100644 example2/README.md
 ```
   - similarly to commit all files/directories use : '$ git commit -a -m "multiple files committed" '
-  - git push '### has to be updated'
-  
+
 ### Parallel Developement in Git 
 
 #### Git Branches: 
-> Git branch is like pointers pointing at changes. Master is the main referral branch in Git.
- - Local Branch: Only created in local repository
- - Remote branch: Connect from Local to remote repository
+   Git branch is like pointers pointing at changes. Master is the main referral branch in Git.
+ 	- Local Branch: Only created in local repository
+ 	- Remote branch: Connect from Local to remote repository
 
-> create a branch  
+#### Create a branch  
 ```sh
  $ git branch firstbranch
 ```
-> switch to first branch
+#### Switch to first branch
 ```sh
  $ git checkout firstbranch
 ```
-> directly create & switch branch. It will create the branch if not created.
+#### Directly create & switch branch. It will create the branch if not created.
 ```sh
  $ git checkout -b firstbranch
 ```
  - Currently to the branch make necessary changes. Then that can be merged to Master branch.
  - Merging to master branch can be done either through cli or in git ui. Ideally at enterprise label, branch is pushed to the remote repository & requested for merge by adding few reviewers/approvers. After reviwer reviews the changes, approver merges the branch to master. (We will cover this later in detail.) 
 
-#### Difference between  Pull-Fetch & Rebase-Merge 
+### Difference between Pull-Fetch & Rebase-Merge 
+ 
  - Pull: Pulls all new changes from repo & connects to your master branch. => `'git pull' = 'git fetch' + 'git merge'`
  - Fetch: Fetches all changed files & stores to the current branch in local repo rather than Master branch.
  
  - Rebase:  The branch is merged to the master branch at the head. Rebase makes the history very clean. It is used to   	    cleanup the branches.
  - Merge: The branch is merged to the master as a side branch. `Demontsration will be done afterwards.`
 
-> Merge a branch to Master. 
+### Merge a branch to Master
 ```sh
  # before merge operation, switch to master branch
  $ git checkout master
  # perform merge operation
  $ git merge feature/branch0
 ```
-> Push the branch (any branch even master) to the remote repo 
+### Push the branch (any branch even master) to the remote repo 
 ```sh
  $ git push origin master
 ```
