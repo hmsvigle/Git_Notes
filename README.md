@@ -1,7 +1,6 @@
 # Git_Notes
 
-
-> Remove Git from ubuntu machine
+> Uninstall/Remove Git from ubuntu machine
 ```sh
 $ sudo apt-get autoremove purge -y git
 $ sudo rm -rf ~/.git
@@ -35,6 +34,11 @@ $ cat ~/.gitconfig
 	autocrlf = input
 [color]
 	ui = auto
+```
+### Notes !!
+```sh
+  ---/.git/config --> Contains each specific repository related configurations
+ ~/.gitconfig --> default git configurations for the user
 ```
 
 > Create local Repo / Clone Remote repo
