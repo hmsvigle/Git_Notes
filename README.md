@@ -16,7 +16,7 @@ $ sudo apt-get -y update
 $ sudo apt-get install -y git
 $ git --version '# git version 2.7.4'
 ```
-> configure git 
+> configure git parameters
 ```sh
 $ git config --list '# Lists all global configurations for git --> None for now'
 $ git config --global user.name "hmsvigle"
@@ -79,8 +79,9 @@ $ tree .
   - git should identify to which remote directory data sync (pull/push) happen.
   - add the remote repo as origin
   - pull files
-  - update data
+  - Make changes
   - push 
+  
 ```sh
 $ git remote add origin <git-repo-url>
 $ git pull origin master
@@ -93,8 +94,107 @@ $ ls  --> the remote repository is synced to local
   - git commit -m "msg" -->  commit staged files
   - git status 
   - git push origin
-  
-  
+```sh
+$ git status
+On branch master
+$ cp -r ../<>/example1 .
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	example1/
+```
+  - after copying a directory where my actual data resides to the git directory, git status identifies it as a new file, which is still untracked as its is not added to git index, but available in the git directory.
+```sh
+$ git add example1
+$ git status
+  On branch master
+  Changes to be committed:
+    (use "git reset HEAD <file>..." to unstage)
+
+	new file:   example1/Dockerfile
+	new file:   example1/README.md
+	new file:   example1/api/Dockerfile
+	new file:   example1/api/app-1.py
+	new file:   example1/api/app-flask.py
+	new file:   example1/api/requirements.txt
+	new file:   example1/redis/Dockerfile
+```
+  - Now the new data has been staged for commit & reflects as "changes to commit" with '$ git status' command
+  - if there are multiple files to be staged use : '$ git add -A'
+```sh
+$ git commit -m "add_word & autocomplete redis API exposure through Flask"
+ [master xxxx] add_word & autocomplete redis API exposure through Flask
+   7 files changed, 218 insertions(+)
+   create mode 100644 example1/Dockerfile
+   create mode 100644 example1/README.md
+   create mode 100644 example1/api/Dockerfile
+   create mode 100755 example1/api/app-1.py
+   create mode 100755 example1/api/app-flask.py
+   create mode 100644 example1/api/requirements.txt
+   create mode 100644 example1/redis/Dockerfile
+```
+> Track all the changes made to git index
+```sh
+$ git log
+ commit bc56ecfebcef3b3cdde4135a4b7a287fde44bfd2
+ Author: hmsvigle <hmsvigle@gmail.com>
+ Date:   Sun Apr 12 19:20:26 2020 +0530
+ 
+    add_word & autocomplete redis API exposure through Flask
+
+ commit 970c4dad9efb0fbe2ffb4c21c082b385de657ab9
+ Author: hmsvigle <hmsvigle@gmail.com>
+ Date:   Mon Apr 6 13:49:55 2020 +0530
+
+    draft
+```
+#### Note: - You cant add an empty file to git index.
+```sh
+$ mkdir -p example2
+$ git status
+ On branch master
+ nothing to commit, working directory clean
+$ echo "example2" > example2/README.md
+$ git status
+ On branch master
+ Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	example2/
+nothing added to commit but untracked files present (use "git add" to track)
+```
+  - add new file/directory & the commit
+```sh
+$ git add -A
+$ git status
+ On branch master
+ Changes to be committed:
+   (use "git reset HEAD <file>..." to unstage)
+     new file:   example2/README.md
+$  git commit -a -m "example2 draft"
+ [master xxxx] example2 draft
+   1 file changed, 1 insertion(+)
+   create mode 100644 example2/README.md
+```
+  - similarly to commit all files/directories use : '$ git commit -a -m "multiple files committed" '
+  - git push '### has to be updated'
+### Parallel Developement in Git 
+
+#### Git Branches: 
+> Git branch is like pointers pointing at changes. Master is the main referral branch in Git.
+ - Local Branch: Only created in local repository
+ - Remote branch: Connect from Local to remote repository
+
+> create a branch  
+$ git branch firstbranch
+
+> switch to first branch
+$ git checkout firstbranch
+
+> directly create & switch branch. It will create the branch if not created.
+$ git checkout -b firstbranch 
+
+ 
 #### Clone remote repository to Local
 $ git clone 
 
