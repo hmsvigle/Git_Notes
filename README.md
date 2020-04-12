@@ -200,53 +200,11 @@ $  git commit -a -m "example2 draft"
 ```
  - Currently to the branch make necessary changes. Then that can be merged to Master branch.
  - Merging to master branch can be done either through cli or in git ui. Ideally at enterprise label, branch is pushed to the remote repository & requested for merge by adding few reviewers/approvers. After reviwer reviews the changes, approver merges the branch to master. (We will cover this later in detail.) 
- 
+
+#### Difference between  Pull-Fetch & Rebase-Merge 
  - Pull: Pulls all new changes from repo & connects to your master branch. => `'git pull' = 'git fetch' + 'git merge'`
  - Fetch: Fetches all changed files & stores to the current branch in local repo rather than Master branch.
  
-#### Clone remote repository to Local
-$ git clone 
+ - Rebase:  The branch is merged to the master branch at the head. Rebase makes the history very clean. It is used to   	    cleanup the branches.
+ - Merge: The branch is merged to the master as a side branch. `Demontsration will be done afterwards.`
 
-#### List the git branches
-$ git branch
-
-#### create a new feature branch called 'feature-project-template'
-$ git checkout -b feature/project-template
-
-#### switch to the feature branch
-$ git checkout  <feature_branch>
-
-#### stage all the files you have changed
-$ git add .
-
-#### check the files/directories are staged for commit.
-$ git status
-
-#### commit changes to git with an instructive message
-$ git commit -m 'Create project template'
-
-#### push changes to remote branch
-$ git push origin feature/project-template
-
-#### List all branches
-$ git branch -a
-
-#### List Remote branches :
-$ git branch -r
-
-#### git view all your settings
-$ git config --list
-
-$ git config --global user.name "HPANIGR"
-$ git config --global user.email himansu.panigrahy@daimler.com
-
-$ git clean [-f]  --> force Remobve 
-$ git clean [-d]  --> remove untracked files
-$ git clean [-n]  --> dry-run before actual removal command
-
-
-%% Exception %% :  
-	fatal: 'origin' does not appear to be a git repository
-	Cause: This is typically because you have not set the origin alias on your Git repository.
-	Resolution : 
-		$ git remote add origin URL_TO_YOUR_REPO
