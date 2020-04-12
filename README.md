@@ -1,4 +1,16 @@
 # Git_Notes
+
+> Remove Git from ubuntu machine
+```sh
+$ sudo apt-get autoremove purge -y git
+$ sudo rm -rf ~/.git
+$ sudo rm -rf ~/.gitconfig
+```
+> Check if git is still installed or not !!
+```sh
+$ which git '# no result'
+```
+
 > Create local Repo / Clone Remote repo
 #### Create Git Local repository
 $ git init
