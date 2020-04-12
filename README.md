@@ -120,8 +120,8 @@ $ git status
 	new file:   example1/api/requirements.txt
 	new file:   example1/redis/Dockerfile
 ```
-  - Now the new data has been staged for commit & reflects as "changes to commit" with '$ git status' command
-  - if there are multiple files to be staged use : '$ git add -A'
+  - Now the new data has been staged for commit & reflects as "changes to commit" with `$ git status` command
+  - if there are multiple files to be staged use : `$ git add -A`
 ```sh
 $ git commit -m "add_word & autocomplete redis API exposure through Flask"
  [master xxxx] add_word & autocomplete redis API exposure through Flask
@@ -178,6 +178,7 @@ $  git commit -a -m "example2 draft"
 ```
   - similarly to commit all files/directories use : '$ git commit -a -m "multiple files committed" '
   - git push '### has to be updated'
+  
 ### Parallel Developement in Git 
 
 #### Git Branches: 
@@ -186,14 +187,20 @@ $  git commit -a -m "example2 draft"
  - Remote branch: Connect from Local to remote repository
 
 > create a branch  
-$ git branch firstbranch
+`$ git branch firstbranch`
 
 > switch to first branch
-$ git checkout firstbranch
+`$ git checkout firstbranch`
 
 > directly create & switch branch. It will create the branch if not created.
-$ git checkout -b firstbranch 
+`$ git checkout -b firstbranch`
 
+ - Currently to the branch make necessary changes. Then that can be merged to Master branch.
+ - Merging to master branch can be done either through cli or in git ui. Ideally at enterprise label, branch is pushed to the remote repository & requested for merge by adding few reviewers/approvers. After reviwer reviews the changes, approver merges the branch to master. (We will cover this later in detail.) 
+ 
+ - Pull: Pulls all new changes from repo & connects to your master branch. => `'git pull' = 'git fetch' + 'git merge'`
+ - Fetch: Fetches all changed files & stores to the current branch in local repo rather than Master branch.
+ 
  
 #### Clone remote repository to Local
 $ git clone 
