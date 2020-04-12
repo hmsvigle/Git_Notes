@@ -41,8 +41,7 @@ $ cat ~/.gitconfig
  ~/.gitconfig --> default git configurations for the user
 ```
 
-> Create local Repo / Clone Remote repo
-#### Create Git Local repository
+> Create local Repository
 ```sh
 $ git init
 ```
@@ -75,8 +74,27 @@ $ tree .
     └── tags
 
 9 directories, 13 files
-
 ```
+> Syncing remote repository:
+  - git should identify to which remote directory data sync (pull/push) happen.
+  - add the remote repo as origin
+  - pull files
+  - update data
+  - push 
+```sh
+$ git remote add origin <git-repo-url>
+$ git pull origin master
+$ ls  --> the remote repository is synced to local
+  READEME.md  .git
+```
+> Make changes:
+  - git status --> Status of files added/staged/ready to commit
+  - git add -A --> Stage required files 
+  - git commit -m "msg" -->  commit staged files
+  - git status 
+  - git push origin
+  
+  
 #### Clone remote repository to Local
 $ git clone 
 
