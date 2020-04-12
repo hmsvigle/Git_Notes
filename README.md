@@ -43,7 +43,40 @@ $ cat ~/.gitconfig
 
 > Create local Repo / Clone Remote repo
 #### Create Git Local repository
+```sh
 $ git init
+```
+ - This will add .git directory under the current directory. 
+ - Below is the tree structure of it.
+```sh
+$ tree .
+.git
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+
+9 directories, 13 files
+
+```
 #### Clone remote repository to Local
 $ git clone 
 
