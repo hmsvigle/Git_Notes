@@ -208,3 +208,19 @@ $  git commit -a -m "example2 draft"
  - Rebase:  The branch is merged to the master branch at the head. Rebase makes the history very clean. It is used to   	    cleanup the branches.
  - Merge: The branch is merged to the master as a side branch. `Demontsration will be done afterwards.`
 
+> Merge a branch to Master. 
+```sh
+ # before merge operation, switch to master branch
+ $ git checkout master
+ # perform merge operation
+ $ git merge feature/branch0
+```
+> Push the branch (any branch even master) to the remote repo 
+```sh
+ $ git push origin master
+```
+
+### References:
+1. [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
+2. [edureka]()
+3. [github learningkit](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
