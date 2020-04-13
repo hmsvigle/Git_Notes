@@ -2,14 +2,14 @@
 
 1. [Uninstall/Remove Git from ubuntu machine](https://github.com/hmsvigle/My_Git_Notes#1-uninstallremove-git-from-ubuntu-machine)
 2. [Install git in Ubuntu machine](https://github.com/hmsvigle/My_Git_Notes#2-Install-git-in-Ubuntu-machine)
-3. [Configure git parameters](./#3-Configure-git-parameters)
-4. [Create local Repository]()
-5. [Sync remote repository]()
-6. [Make necessary code changes]()
-7. [Parallel Developement in Git]()
-8. [Pull-Fetch & Rebase-Merge]()
-9. [Merge Branch to master]()
-10. [Git Push]()
+3. [Configure git parameters](https://github.com/hmsvigle/My_Git_Notes#3-configure-git-parameters)
+4. [Create local Repository](https://github.com/hmsvigle/My_Git_Notes#4-create-local-repository)
+5. [Sync remote repository](https://github.com/hmsvigle/My_Git_Notes#5-sync-remote-repository)
+6. [Make necessary code changes](https://github.com/hmsvigle/My_Git_Notes#6-make-necessary-code-changes)
+7. [Parallel Developement in Git](https://github.com/hmsvigle/My_Git_Notes#7-parallel-developement-in-git)
+8. [Pull-Fetch & Rebase-Merge](https://github.com/hmsvigle/My_Git_Notes#8-difference-between-pull-fetch--rebase-merge)
+9. [Merge Branch to master](https://github.com/hmsvigle/My_Git_Notes#9-merge-a-branch-to-master)
+10. [Git Push](https://github.com/hmsvigle/My_Git_Notes#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
@@ -36,7 +36,7 @@ $ git config --global core.autocrlf input '# ensures consistent input behavior f
 $ git config --global color.ui auto
 ```
   - Display all config of git
-```sh
+```yaml
 $ cat ~/.gitconfig 
 [user]
 	name = hmsvigle
