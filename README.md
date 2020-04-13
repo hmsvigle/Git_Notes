@@ -36,7 +36,7 @@ $ git config --global core.autocrlf input '# ensures consistent input behavior f
 $ git config --global color.ui auto
 ```
   - Display all config of git
-```yaml
+```sh
 $ cat ~/.gitconfig 
 [user]
 	name = hmsvigle
