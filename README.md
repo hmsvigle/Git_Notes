@@ -1,6 +1,6 @@
 # Git_Notes
 
-1. [Uninstall/Remove Git from ubuntu machine]()
+1. [Uninstall/Remove Git from ubuntu machine](https://github.com/hmsvigle/My_Git_Notes#1-uninstallremove-git-from-ubuntu-machine)
 2. [Install git in Ubuntu machine]()
 3. [Configure git parameters]()
 4. [Create local Repository]()
