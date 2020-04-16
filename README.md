@@ -94,7 +94,10 @@ $ tree .
   - push 
   
 ```sh
+# git remote add <Your-Custom_name_of_Repository> <git_rep_url>
 $ git remote add origin <git-repo-url>
+# Then Pull the Branch 
+# git pull <Your-Custom_name_of_Repository> <Branch>
 $ git pull origin master
 $ ls  --> the remote repository is synced to local
   READEME.md  .git
@@ -108,8 +111,21 @@ $ ls  --> the remote repository is synced to local
   - git commit -m "msg" -->  commit staged files
   - git status   
 ```sh
+# check status of staged files
 $ git status
 On branch master
+
+# check details of local & remote branches. * will notify the current branch. remotes/ => remote branch, others => local branch
+$ git branch --list -a
+  feature/i3-access00
+* master
+  remotes/expat-calender/master
+
+# check git status
+$ git status
+On branch master
+
+# Make changes
 $ cp -r ../<>/example1 .
 $ git status
 On branch master
