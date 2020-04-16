@@ -116,7 +116,7 @@ $ git remote -v
 $ git status
 On branch master
 
-# check details of local & remote branches. * will notify the current branch. remotes/ => remote branch, others => local branch
+# check details of local & remote branches. * will notify the current branch. remotes/=>remote branch, others=>local branch
 $ git branch --list -a
   feature/i3-access00
 * master
@@ -153,7 +153,7 @@ $ git status
   - Remove the staged file from git. This step can be performed before commiting the changes to remove unwanted added file from staging.
 ```sh
  $ git rm --chached <filename>
- # if this doesnt work fue to HEAD pointed to diff position, you can always execute force removal. (PS: file/directory)
+ # if this doesnt work fue to HEAD pointed to diff position, you can always execute force removal.(PS: file/directory)
   error: the following file has staged content different from both the
     file and the HEAD:
        <filename>
@@ -218,7 +218,7 @@ $  git commit -a -m "example2 draft"
    1 file changed, 1 insertion(+)
    create mode 100644 example2/README.md
 ```
-  - similarly to commit all files/directories use : '$ git commit -a -m "multiple files committed" '
+#### Note: similarly to commit all files/directories use : `$ git commit -a -m "multiple files committed" '
 
 ### 7. Parallel Developement in Git 
 
