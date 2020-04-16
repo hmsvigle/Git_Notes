@@ -99,6 +99,9 @@ $ git pull origin master
 $ ls  --> the remote repository is synced to local
   READEME.md  .git
 ```
+ - check currently configured remote repositories
+ ` $ git remote -v`
+ 
 ### 6. Make Necessary code changes
   - git status --> Status of files added/staged/ready to commit
   - git add -A --> Stage required files 
