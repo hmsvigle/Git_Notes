@@ -102,9 +102,10 @@ $ git pull origin master
 $ ls  --> the remote repository is synced to local
   READEME.md  .git
 ```
- - check currently configured remote repositories
- ` $ git remote -v`
- 
+  - check currently configured remote repositories
+```sh
+$ git remote -v
+```
 ### 6. Make Necessary code changes
   - git status --> Status of files added/staged/ready to commit
   - git add -A --> Stage required files 
@@ -148,6 +149,16 @@ $ git status
 	new file:   example1/api/app-flask.py
 	new file:   example1/api/requirements.txt
 	new file:   example1/redis/Dockerfile
+```
+  - Remove the staged file from git. This step can be performed before commiting the changes to remove unwanted added file from staging.
+```sh
+ $ git rm --chached <filename>
+ # if this doesnt work fue to HEAD pointed to diff position, you can always execute force removal. (PS: file/directory)
+  error: the following file has staged content different from both the
+    file and the HEAD:
+       <filename>
+(use -f to force removal)
+ $ git rm -f --chached <filename>
 ```
   - Now the new data has been staged for commit & reflects as "changes to commit" with `$ git status` command
   - if there are multiple files to be staged use : `$ git add -A`
