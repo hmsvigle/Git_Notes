@@ -263,16 +263,53 @@ $  git commit -a -m "example2 draft"
 ```
 
 ### Issues & Resolutions:
-1. 
- - Issue: How to remove staged files from git
+1. How to remove staged files from git
+ - Issue: 
  - Description: Files are added to git branch of a repository are called as staged files. Issue arises, if the staged files are not commited & further action is initiated on any other repository/branch.   
  - Resolution:  
     * i. Commit the changes & push the changes to target repository
-    
+    ```sh
+      $ git commit -m -a "Message"
+      $ git push <reponame> master 
+    ```
     * ii. Remove the staged files from the staging.
+    ```sh
+      $ git rm 
+    ```
     * iii. Reset the HEAD itself
+    ```sh 
+       $ git reset HEAD
+    ```
+      iv. Revert the file back to the state it was in before the changes we can use:
+    ```sh 
+       $ git checkout -- <file>    
+    ```
+      v. Remove file/directory from git repo & retry
+    ```sh
+       $ git rm -r <file>/<directory>
+    ```
+      vi. Remove a file from the repo but keep it on disk, say we forgot to add it to our .gitignore file then use --cache
+    ```sh
+       $ git rm <filename> --cache
+    ```
+2. Git push is rejected
+  - Issue: " Updates were rejected because the remote contains work that you do"
+  ```sh
+   ! [rejected]        master -> master (fetch first)
+   error: failed to push some refs to <remote repo url>
+   hint: Updates were rejected because the remote contains work that you do
+   hint: not have locally. This is usually caused by another repository pushing
+   hint: to the same ref. You may want to first integrate the remote changes
+   hint: (e.g., 'git pull ...') before pushing again.
+   hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  ```
+  - Description: After we pull the repo, there could be some changed made to repository (possibly through UI/by someoneelse). So the push action is failing.
+  - Resolution: The local repo has to be synched with remote repo. Then try to stage changes & push it again.
+  
+  
 ### References:
  [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
  [edureka]()
  [github learningkit](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
  [git-scm](https://git-scm.com/book/en/v2/)
+ [gitlab-docs](https://docs.gitlab.com/ee/README.html)
