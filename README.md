@@ -262,7 +262,17 @@ $  git commit -a -m "example2 draft"
  $ git push origin master
 ```
 
+### Issues & Resolutions:
+1. 
+ - Issue: How to remove staged files from git
+ - Description: Files are added to git branch of a repository are called as staged files. Issue arises, if the staged files are not commited & further action is initiated on any other repository/branch.   
+ - Resolution:  
+    * i. Commit the changes & push the changes to target repository
+    
+    * ii. Remove the staged files from the staging.
+    * iii. Reset the HEAD itself
 ### References:
  [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
  [edureka]()
  [github learningkit](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+ [git-scm](https://git-scm.com/book/en/v2/)
