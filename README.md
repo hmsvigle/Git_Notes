@@ -239,7 +239,12 @@ $  git commit -a -m "example2 draft"
 ```sh
  $ git checkout -b firstbranch
 ```
- * Currently to the branch make necessary changes. Then that can be merged to Master branch.
+ * Fetch fresh changes from `Master` branch to `<Current-Branch>`
+```sh
+ $ git checkout firstbranch
+ $ git rebase master
+```
+ * Make necessary changes to current branch. Then that can be merged to Master branch.
  * Merging to master branch can be done either through cli or in git ui. Ideally at enterprise label, branch is pushed to the remote repository & requested for merge by adding few reviewers/approvers. After reviwer reviews the changes, approver merges the branch to master. (We will cover this later in detail.) 
  * Delete Local Branch
 ```sh 
@@ -254,7 +259,6 @@ $  git commit -a -m "example2 draft"
 ```sh
  $ git fetch -p
 ```
- 
 
 ### 8. Difference between Pull-Fetch & Rebase-Merge 
  
