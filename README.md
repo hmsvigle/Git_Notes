@@ -241,6 +241,20 @@ $  git commit -a -m "example2 draft"
 ```
  * Currently to the branch make necessary changes. Then that can be merged to Master branch.
  * Merging to master branch can be done either through cli or in git ui. Ideally at enterprise label, branch is pushed to the remote repository & requested for merge by adding few reviewers/approvers. After reviwer reviews the changes, approver merges the branch to master. (We will cover this later in detail.) 
+ * Delete Local Branch
+```sh 
+ $ git branch -d <branch> 
+ $ git branch -D <branch> # Force delete the branch
+```
+ * Delete remote Branch
+```sh
+ $ git push origin --delete
+```
+ * Synchronize your branch list from Remote with below command. The `-p` flag means "prune". After fetching, branches which no longer exist on the remote will be deleted.
+```sh
+ $ git fetch -p
+```
+ 
 
 ### 8. Difference between Pull-Fetch & Rebase-Merge 
  
@@ -308,8 +322,9 @@ $  git commit -a -m "example2 draft"
   
   
 ### References:
- [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
- [edureka]()
- [github learningkit](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
- [git-scm](https://git-scm.com/book/en/v2/)
- [gitlab-docs](https://docs.gitlab.com/ee/README.html)
+ * [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
+ * [edureka]()
+ * [github learningkit](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+ * [git-scm](https://git-scm.com/book/en/v2/)
+ * [gitlab-docs](https://docs.gitlab.com/ee/README.html)
+ * [freecodecamp](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely)
