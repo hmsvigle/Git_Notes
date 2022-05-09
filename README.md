@@ -10,7 +10,7 @@
 8. [Pull-Fetch & Rebase-Merge](./README.md#8-difference-between-pull-fetch--rebase-merge)
 9. [Merge Branch to master](./README.md#9-merge-a-branch-to-master)
 10. [Git Push](./README.md#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
-11. [Git fork]
+11. [Git fork](./README.md#11)
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
@@ -280,6 +280,30 @@ $  git commit -a -m "example2 draft"
 ```sh
  $ git push origin master
 ```
+
+### 11. Fork Public repo to private repo & update
+
+To make an exact duplicate, you need to perform both a bare-clone and a mirror-push.
+
+Open up the command line, and type these commands:
+
+```sh
+
+# Clone the public repo.
+$ git clone --bare https://github.com/exampleuser/old-repository.git
+
+# Make a bare clone of the repository
+$ cd old-repository.git
+
+# Mirror-push to the new repository
+$ git push --mirror https://github.com/exampleuser/new-repository.git
+
+# Remove our temporary local repository
+$ cd ..
+$ rm -rf old-repository.git
+
+```
+
 
 ### Issues & Resolutions:
 1. How to remove staged files from git
