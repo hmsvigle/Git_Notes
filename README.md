@@ -9,7 +9,8 @@
 7. [Parallel Developement in Git](https://github.com/hmsvigle/My_Git_Notes#7-parallel-developement-in-git)
 8. [Pull-Fetch & Rebase-Merge](https://github.com/hmsvigle/My_Git_Notes#8-difference-between-pull-fetch--rebase-merge)
 9. [Merge Branch to master](https://github.com/hmsvigle/My_Git_Notes#9-merge-a-branch-to-master)
-10. [Git Push](https://github.com/hmsvigle/My_Git_Notes#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
+10. [Git Push](./#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
+11. [Git fork]
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
