@@ -306,7 +306,7 @@ $ rm -rf old-repository.git
 
 
 ### Issues & Resolutions:
-1. How to remove staged files from git
+**1. How to remove staged files from git**
  - Issue: 
  - Description: Files are added to git branch of a repository are called as staged files. Issue arises, if the staged files are not commited & further action is initiated on any other repository/branch.   
  - Resolution:  
@@ -335,7 +335,7 @@ $ rm -rf old-repository.git
     ```sh
        $ git rm <filename> --cache
     ```
-2. Git push is rejected
+**2. Git push is rejected**
   - Issue: " Updates were rejected because the remote contains work that you do"
   ```sh
    ! [rejected]        master -> master (fetch first)
@@ -348,7 +348,11 @@ $ rm -rf old-repository.git
   ```
   - Description: After we pull the repo, there could be some changed made to repository (possibly through UI/by someoneelse). So the push action is failing.
   - Resolution: The local repo has to be synched with remote repo. Then try to stage changes & push it again.
-  
+
+**3. Fatal Error: `https` protocol not supported**
+  - git remote set-url origin https://github.com/Saifou/testForge.git
+  - in git bach command, try to paste the url by rightclick/paste, instead of any shortcuts to paste.
+ 
   
 ### References:
  * [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
