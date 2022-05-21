@@ -97,6 +97,13 @@ $ tree .
 ```sh
 # git remote add <Your-Custom_name_of_Repository> <git_rep_url>
 $ git remote add origin <git-repo-url>
+#
+$ git fetch 
+#
+$ git checkout master
+# set upstream
+$ git branch set-upstream-to=orgini/master
+
 # Then Pull the Branch 
 # git pull <Your-Custom_name_of_Repository> <Branch>
 $ git pull origin master
