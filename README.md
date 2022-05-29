@@ -11,6 +11,17 @@
 9. [Merge Branch to master](./README.md#9-merge-a-branch-to-master)
 10. [Git Push](./README.md#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
 11. [Git fork](./README.md#11)
+12. Fast-Forward Merge
+13. `git logs --graph`
+  * `git log --graph --decorate --online` --> Better graphical representation
+15. Explicicte Merge/Recursive Merge
+  * History of branch also gets added to master
+17. Squash Merge
+  * Clean master history 
+18. Resolve git conflict while merging
+  *  When we make changes in same file in both the branches, conflict arises.
+  *  To resolve the issue, review & keep only one content, that needs to be there.
+  *  Then attempt to merge.
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
