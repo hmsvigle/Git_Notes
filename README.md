@@ -23,6 +23,8 @@
   *  To resolve the issue, review & keep only one content, that needs to be there.
   *  Then attempt to merge.
 
+19. [Issues](#README.md/Issues-&-Resolutions)
+
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
 $ sudo apt-get autoremove purge -y git
@@ -371,7 +373,12 @@ $ rm -rf old-repository.git
   - git remote set-url origin https://github.com/Saifou/testForge.git
   - in git bach command, try to paste the url by rightclick/paste, instead of any shortcuts to paste.
  
-  
+** 4. CRLF will be replaced by LF in <File>
+  - While `git add .` command, above exception is thrown.
+  - `Solution:` If you are a single developer working on a windows machine, and you don't care that git automatically replaces LFs to CRLFs, disable the parameter
+  ```sh
+  git config core.autocrlf true
+  ```
 ### References:
  * [github-help](https://help.github.com/en/enterprise/2.19/user/github/using-git/git-workflows)
  * [edureka]()
