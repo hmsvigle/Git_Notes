@@ -1,5 +1,10 @@
 # Git_Notes
 
+### Git Stages:
+
+![Git Stages](https://user-images.githubusercontent.com/24938159/230939160-7586c846-b801-428d-965d-4ce3a989cf72.png)
+
+
 1. [Uninstall/Remove Git from ubuntu machine](./README.md#1-uninstallremove-git-from-ubuntu-machine)
 2. [Install git in Ubuntu machine](./README.md#2-Install-git-in-Ubuntu-machine)
 3. [Configure git parameters](./README.md#3-configure-git-parameters)
