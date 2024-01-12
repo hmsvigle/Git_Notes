@@ -25,8 +25,8 @@
   *  When we make changes in same file in both the branches, conflict arises.
   *  To resolve the issue, review & keep only one content, that needs to be there.
   *  Then attempt to merge.
-
-19. [Issues](#README.md/Issues-&-Resolutions)
+19. [Update local branch with remote branch](./README.md#19-Update-localbranch-from-remotebranch)
+20. [Issues](#README.md/Issues-&-Resolutions)
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
@@ -326,7 +326,8 @@ $ cd ..
 $ rm -rf old-repository.git
 
 ```
-
+### 19. Update localbranch from remotebranch
+$ git pull --all --prune
 
 ### Issues & Resolutions:
 **1. How to remove staged files from git**
