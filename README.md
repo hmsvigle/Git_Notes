@@ -15,10 +15,13 @@
 10. [Git Push](./README.md#10-push-the-branch-any-branch-even-master-to-the-remote-repo)
 11. [Git fork](./README.md#11)
 12. Fast-Forward Merge
-13. `git logs --graph`
-  * `git log --graph --decorate --online` --> Better graphical representation
+13. `git logs`
+  * `git log --graph --decorate --onlin` --> Better graphical representation
+  * `git log --graph`
     <img width="500" alt="Screenshot 2024-02-05 at 10 40 20 PM" src="https://github.com/hmsvigle/My_Git_Notes/assets/24938159/1a01cdf8-3f38-471c-90b7-57a9dd10089a">
-    
+  * `git log --oneline`
+    <img width="513" alt="Screenshot 2024-02-05 at 10 52 15 PM" src="https://github.com/hmsvigle/My_Git_Notes/assets/24938159/02b74c8c-8adf-4247-9300-ca91b59eedbf">
+  * `git show commitid`
 15. Explicicte Merge/Recursive Merge
   * History of branch also gets added to master
 17. Squash Merge
@@ -29,6 +32,7 @@
   *  Then attempt to merge.
 19. [Update local branch with remote branch](./README.md#19-Update-localbranch-from-remotebranch)
 20. [Issues](#README.md/Issues-&-Resolutions)
+21. Git Playground `https://onlywei.github.io/explain-git-with-d3/#checkout`
 
 ### 1. Uninstall/Remove Git from ubuntu machine
 ```sh
