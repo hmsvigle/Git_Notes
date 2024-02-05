@@ -17,6 +17,8 @@
 12. Fast-Forward Merge
 13. `git logs --graph`
   * `git log --graph --decorate --online` --> Better graphical representation
+    <img width="500" alt="Screenshot 2024-02-05 at 10 40 20 PM" src="https://github.com/hmsvigle/My_Git_Notes/assets/24938159/1a01cdf8-3f38-471c-90b7-57a9dd10089a">
+    
 15. Explicicte Merge/Recursive Merge
   * History of branch also gets added to master
 17. Squash Merge
